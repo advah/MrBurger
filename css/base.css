@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    
+}
+
+.wrapper {
+
+}
+
+.main {
+
+}
+
+ul {
+    padding: 0px;
+    margin: 0px
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.heading__text {
+
+}

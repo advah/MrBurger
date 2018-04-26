@@ -1,0 +1,379 @@
+/*FONTS*/
+@font-face {
+    font-family: 'gagalin';
+    src: url('fonts/gagalin.woff2') format('woff2'),
+         url('fonts/gagalin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lifehackmedium';
+    src: url('fonts/lifehack_medium.woff2') format('woff2'),
+         url('fonts/lifehack_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+/*end FONTS*/
+
+/*base*/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    
+}
+
+/* .wrapper {
+
+} */
+
+ul {
+    padding: 0px;
+    margin: 0px
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+/* .heading__text {
+
+} */
+
+.container {
+    min-width: 100%;
+
+}
+
+.wrap-pg {
+    width: 1100px;
+    min-height: 650px;
+    margin: 0 auto;
+    background-size: contain;
+}
+
+.heading {
+    font-family: "gagalin";
+    color: #f9b43b;
+    font-size: 72px;
+}
+/*end base*/
+
+/* HEADER*/
+.header {
+    width: 1030px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+}
+
+.header__logo {
+    margin-left: 0px;
+
+}
+
+.header__nav {
+    width: 75%;
+    text-align: right;
+    padding-right: 13px;
+}
+
+.header__ref, .order-ref {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header__ref::before {
+    display: inline-block;
+    content: "•";
+    padding: 0px 12px;
+}
+
+.header__ref--about::before {
+    display: none;
+}
+
+.header__item {
+    display: inline-block;
+    /* letter-spacing: 2px; */
+}
+
+.header__btn {
+    margin: 0px;
+}
+
+.order-ref {
+
+    display: block;
+    padding: 8px 17px;
+    background: #e45028;
+    border-radius: 7px;
+}
+
+/*end HEADER*/
+
+
+/*MAIN-pg*/
+.container__main-pg {
+    background: #070707;
+}
+
+.main-pg {
+    background: url(img/main-pg/bkground.jpg) 0 0 no-repeat;
+}
+
+.we-do {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__img-wrap {
+    width: 30%;
+}
+
+.main__text-wrap {
+    flex-direction: column;
+    width: 58%;
+    padding-left: 100px;
+    padding-top: 115px;
+}
+
+.main__text {
+    font-family: lifehackmedium;
+    font-weight: 500;
+    color: #fff;
+    font-size: 65px;
+    line-height: .9;
+    padding-top: 10px;
+}
+
+.side-menu {
+    /* background: #fff; */
+    width: 8%;
+    position: fixed;
+}
+
+.side-menu__item {
+    padding: 0px;
+}
+
+.side-menu__item__circle {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 12px 0px;
+    background: url(img/main-pg/nav.png) 0 0 no-repeat;
+    margin-left: 64px;
+}
+
+.side-menu__item__circle-activ {
+    background: url(img/main-pg/nav-activ.png) 0 0 no-repeat;
+    margin-left: 59px;
+}
+
+.btn-nextpg {
+    position: absolute;
+    top: 75%;
+    right: 49%;
+    width: 29px;
+    height: 14px;
+    background: url(img/main-pg/arrow-scroll.png) 0 0 no-repeat;
+}
+
+/*main-pg end*/
+
+/*WE-pg*/
+
+.container__we-pg {
+    background: #eee8e4;    
+}
+
+#we-pg {
+    background: url(img/we-pg/bkground.jpg) 0 0 no-repeat;
+    padding: 110px 49px;
+}
+
+.we-pg__H1-wrap {
+    margin-bottom: 31px;
+}
+
+.heading__we-pg {
+    color: #2f3234;
+    text-align: center;
+}
+
+.we__list {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.we__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0px 25px;
+}
+
+.we__item__pic-wrap--meat {
+    width: 73px;
+    height: 85px;
+    background: url(img/we-pg/meat.png) 0 0 no-repeat;
+}
+
+.we__item__pic-wrap--hang {
+    width: 97px;
+    height: 89px;
+    background: url(img/we-pg/hand.png) 0 0 no-repeat;
+}
+
+.we__item__pic-wrap--natural {
+    width: 97px;
+    height: 89px;
+    background: url(img/we-pg/natural.png) 0 0 no-repeat;
+}
+
+.we__item__heading {
+    font-size: 24px;
+    font-family: "lifehackmedium";
+    color: rgb(47, 50, 52);
+    padding-top: 18px;
+}
+
+.we__item__text {
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+}
+  
+/*REVIEWS*/
+.container__reviews {
+    background: #2f3234;
+}
+
+.reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__item {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 326px;
+    overflow: hidden;
+}
+
+.reviews__item--one {
+
+    background: url(img/reviews/photo-1.jpg) 1px -35px no-repeat;
+}
+
+.reviews__item--two {
+    background: url(img/reviews/photo-2.jpg) -338px -70px no-repeat;
+}
+
+.reviews__item--three {
+    background: url(img/reviews/photo-3.jpg) -305px -21px no-repeat;
+}
+
+.reviews__item--fore {
+    background: url(img/reviews/photo-4.jpg) -474px -192px no-repeat;
+}
+
+.reviews__item--five {
+    background: url(img/reviews/photo-5.jpg) 0px 0px no-repeat;
+}
+
+.reviews__item--six {
+background: url(img/reviews/photo-6.jpg) -185px 0px no-repeat;
+}
+
+.reviews__item--seven {
+    background: url(img/reviews/photo-7.jpg) -115px 0px no-repeat;
+}
+
+.reviews__item--eight {
+    background: url(img/reviews/photo-8.jpg) -160px 0px no-repeat;
+}
+
+.reviews__item-wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 50, 52, 0.0);
+    padding: 50px 20px;
+}
+
+.reviews__item-wrap:hover {
+    background: rgba(47, 50, 52, 0.6);
+    transition: .5s;
+}
+
+.reviews__item-wrap:hover 
+.reviews__item__header {
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+
+.reviews__item-wrap:hover 
+.reviews__item__text {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.reviews__item-wrap:hover 
+.reviews__item__btn {
+    color: rgb(255, 255, 255);
+    background: #2f3234;
+    transition: 1.5s;
+}
+
+.reviews__item__header {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-family: "gagalin";
+    line-height: 2.008;
+    color: rgba(47, 50, 52, 0.0);
+}
+
+.reviews__item__text {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.0);
+}
+
+.reviews__item__btn {
+    display: inline-block;
+    padding: 15px 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: rgba(47, 50, 52, 0.0);
+    background: rgba(47, 50, 52, 0.0);
+}
