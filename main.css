@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-nextpg {
     position: absolute;
-    top: 88%;
+    top: 61%;
     right: 49%;
     width: 29px;
     height: 14px;
@@ -240,20 +240,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .we__item__pic-wrap--meat {
-    width: 73px;
-    height: 85px;
+    width: 97px;
+    height: 89px;
     background: url(img/we-pg/meat.png) 0 0 no-repeat;
 }
 
 .we__item__pic-wrap--hang {
-    width: 97px;
-    height: 89px;
+    width: 73px;
+    height: 85px;
     background: url(img/we-pg/hand.png) 0 0 no-repeat;
 }
 
 .we__item__pic-wrap--natural {
-    width: 97px;
-    height: 89px;
+    width: 88px;
+    height: 75px;
     background: url(img/we-pg/natural.png) 0 0 no-repeat;
 }
 
