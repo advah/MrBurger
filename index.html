@@ -7,16 +7,16 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic"
         rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Mr Burger</title>
 </head>
 <body>
 
-<v class="wrapper">
+<div class="wrapper">
 
-    <div class="container container__main-pg">
+    <section class="section" id="section__main-pg">
         <!--main container-->
-        <main class="wrap-pg main-pg">
+        <div class="container main-pg">
 
             <!--header-->
             <header class="header">
@@ -28,22 +28,22 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#we-pg" class="header__ref header__ref--about">о нас</a>
+                            <a href="#section__we-pg" class="header__ref header__ref--about">о нас</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__ref"> бургеры</a>
+                            <a href="#section__burger" class="header__ref"> бургеры</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__ref"> команда</a>
+                            <a href="#section__team" class="header__ref"> команда</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__ref"> меню</a>
+                            <a href="#section__menu" class="header__ref"> меню</a>
                         </li>
                         <li class="header__item">
-                            <a href="#reviews" class="header__ref"> отзывы</a>
+                            <a href="#section__reviews" class="header__ref"> отзывы</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__ref"> контакты</a>
+                            <a href="#section__map" class="header__ref"> контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -55,7 +55,7 @@
             </header>
             <!--ending header-->
 
-            <section class="we-do">
+            <div class="we-do">
 
                 <div class="main__img-wrap">
                     <img src="img/main-pg/burger.png" alt="Апетитный бургер" class="main__img">
@@ -66,91 +66,103 @@
                     <div class="main__text">натуральные<br>бургеры</div>
                 </div>
 
-                <nav class="side-menu">
-                    <ul class="side-menu__list">
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle side-menu__item__circle-activ"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                        <li class="side-menu__item">
-                            <div class="side-menu__item__circle"></div>
-                        </li>
-                    </ul>
-                </nav>
+            </div>
 
-            </section>
+        </div>
+        <!--ending container-->
 
-            <div class="btn-nextpg"></div>
+        <a class="btn-nextpg" href="#section__we-pg"></a>
 
-        </main>
-        <!--ending main-pg-->
-    </div>
-    <!--ending container__main-pg-->
+    </section>
+    <!--ending section__main-pg-->
+
 
     <!--Страница WE-->
 
+    <section class="section" id="section__we-pg">
 
-    <div class="container container__we-pg">
-
-        <section id="we-pg" class="wrap-pg">
+        <div class="container we-pg">
 
             <div class="we-pg__H1-wrap">
                 <h2 class="heading heading__we-pg">мы лучшие</h2>
             </div>
 
-            <ul class="we__list">
-                <li class="we__item">
-                    <div class="we__item__pic-wrap we__item__pic-wrap--meat"></div>
-                    <div class="we__item__heading">100% свежее мясо</div>
-                    <div class="we__item__text">Драма представляет собой деструктивный цикл.
-                        Анапест представляет собой анапест. Ямб неравномерен.</div>
-                </li>
+            <div class="we-list-wrap">
+                <ul class="we__list">
+                    <li class="we__item">
+                        <div class="we__item__pic-wrap we__item__pic-wrap--meat"></div>
+                        <div class="we__item__heading">100% свежее мясо</div>
+                        <div class="we__item__text">Драма представляет собой деструктивный цикл.
+                            Анапест представляет собой анапест. Ямб неравномерен.</div>
+                    </li>
 
-                <li class="we__item">
-                    <div class="we__item__pic-wrap we__item__pic-wrap--hang"></div>
-                    <div class="we__item__heading">Ручная  сборка</div>
-                    <div class="we__item__text">Драма представляет собой деструктивный цикл.
-                        Анапест представляет собой анапест.
-                        Первое полустишие притягивает сюжетный реформаторский пафос.</div>
-                </li>
+                    <li class="we__item">
+                        <div class="we__item__pic-wrap we__item__pic-wrap--hang"></div>
+                        <div class="we__item__heading">Ручная  сборка</div>
+                        <div class="we__item__text">Драма представляет собой деструктивный цикл.
+                            Анапест представляет собой анапест.
+                            Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+                    </li>
 
-                <li class="we__item">
-                    <div class="we__item__pic-wrap we__item__pic-wrap--natural"></div>
-                    <div class="we__item__heading">Натуральные<br>ингредиенты</div>
-                    <div class="we__item__text">Драма представляет собой деструктивный цикл.
-                        Анапест представляет собой анапест.</div>
-                </li>
-            </ul>
+                    <li class="we__item">
+                        <div class="we__item__pic-wrap we__item__pic-wrap--natural"></div>
+                        <div class="we__item__heading">Натуральные<br>ингредиенты</div>
+                        <div class="we__item__text">Драма представляет собой деструктивный цикл.
+                            Анапест представляет собой анапест.</div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--ending container-->
+
+    </section>
+    <!--ending section__we-pg-->
+    
+    <!-- BURGERS -->
+    <section class="section" id="section__burger">
 
 
-        </section>
-        <!--ending we-pg-->
+    </section>
+    <!-- ending burgers -->
 
-    </div>
-    <!--container__we-pg-->
+
+    <!--КОМАНДА-->
+
+    <section class="section" id="section__team">
+
+        <div class="team">
+
+            <div class="team__H1-wrap">
+                <h2 class="heading heading__team">команда</h2>
+            </div>
+
+        
+        </div>
+        <!--ending container "team"-->
+        
+    </section>
+    <!--ending section__team-->
+
+
+    <!--MENU-->
+
+    <section class="section" id="section__menu">
+
+        <div class="menu__H1-wrap">
+            <h2 class="heading heading__menu">меню</h2>
+       </div>
+        
+    </section>
+    <!--ending section__menu-->
+
 
     <!--страница REVIEWS-->
 
-    <div class="container container__reviews">
+    <section id="section__reviews">
 
-        <section id="reviews" class="wrap-pg">
+        <div class="reviews__wrap">
 
             <ul class="reviews__list">
 
@@ -260,15 +272,70 @@
 
                 </li>
 
-            </ul>
+            </ul>   
 
-        </section>
-        <!--ending  reviews-->
-    </div>
-    <!--ending container__reviews-->
+        </div>
 
-</v>
+    </section>
+    <!--ending section__reviews-->
+
+
+    <!-- FORM -->
+
+    <section class="section" id="section__form">
+
+        <!--container-->
+        <div class="container">
+
+
+
+        </div>
+        <!--ending container-->
+        
+    </section>
+    <!--ending section__form-->
+
+
+    <!-- MAP -->
+
+    <section class="section" id="section__map">
+
+
+        
+    </section>
+    <!--ending section__map-->
+
+</div>
 <!--end wrapper-->
+
+<nav class="side-menu">
+    <ul class="side-menu__list">
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle side-menu__item__circle-activ"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+        <li class="side-menu__item">
+            <div class="side-menu__item__circle"></div>
+        </li>
+    </ul>
+</nav>
 
 </body>
 </html>
