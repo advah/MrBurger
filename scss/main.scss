@@ -384,76 +384,84 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
   
-  .form__wrap {
+.form__wrap {
     width: 100%;
     height: rem(380px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .order__title {
+.order__title {
     font-family: serif;
-    font-size: 72px;
-    color: #f9b43b;
+    font-size: rem(72px);
+    color: $yellow;
     text-transform: uppercase;
-  }
+}
 
-  .form {
+.form {
     font-size: 14px;
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
     line-height: 1.714;
-  }
+}
   
-  .form__content {
+.form__content {
     display: flex;
     justify-content: center;
   }
   
-  .form__column {
+.form__column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
-  }
+    justify-content: flex-start;
+}
   
-  .form__row {
+.form__row, .form__radio-wrap {
     display: flex;
-  }
+    align-items: center;
+}
   
-  .form__cell {
+.form__cell {
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
+}
   
-  .form__label, .form__input {
-      margin-right: 20px;
-      margin-bottom: 10px;
-      border-radius: 3px;
-  }
+.form__label, .form__input {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form__input {
+    height: rem(35px);
+}
   
-  .input-name {
-      width: rem(220px);
-  }
+.input-name {
+    width: rem(220px);
+}
   
-  .input-st {
-      width: rem(460px);
-  }
-  
-  .input-adress {
-      width: rem(100px);
-  }
-  
-  .form__tx-area {
+.input-st {
+    width: rem(460px);
+}
+
+.input-adress {
+    width: rem(100px);
+}
+
+.form__tx-area {
     width: rem(460px);
     height: rem(110px);
-    border-radius: 3px;
-  }
+    border-radius: 5px;
+}
+
+.form__radio-text {
+    padding: rem(15px) rem(10px);
+}
 // ending form
 
 

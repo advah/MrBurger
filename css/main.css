@@ -545,8 +545,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .order__title {
   font-family: serif;
-  font-size: 72px;
-  color: #f9b43b;
+  font-size: 4.5rem;
+  color: #f8b43a;
   text-transform: uppercase; }
 
 .form {
@@ -571,15 +571,17 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 50%; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
-.form__row {
+.form__row, .form__radio-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .form__cell {
   display: -webkit-box;
@@ -594,7 +596,10 @@ h1, h2, h3, h4, h5, h6 {
 .form__label, .form__input {
   margin-right: 20px;
   margin-bottom: 10px;
-  border-radius: 3px; }
+  border-radius: 5px; }
+
+.form__input {
+  height: 2.1875rem; }
 
 .input-name {
   width: 13.75rem; }
@@ -608,7 +613,10 @@ h1, h2, h3, h4, h5, h6 {
 .form__tx-area {
   width: 28.75rem;
   height: 6.875rem;
-  border-radius: 3px; }
+  border-radius: 5px; }
+
+.form__radio-text {
+  padding: 0.9375rem 0.625rem; }
 
 #section__map {
   background-image: url("../img/map-pg/bkgroung.jpg"); }
