@@ -182,11 +182,55 @@
 
 // TEAM
 
-
 #section__team {
     @extend %section-bg;
     background-image: url(../img/team/bkgroung.jpg);
+    background-position: inherit;
+    position: relative;
 }
+
+.team {
+    position: absolute;
+    border: grey 1px solid;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-container {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5%;
+    padding-left: 20%;
+}
+
+.accordeon {
+    height: 80%;
+
+}
+
+.team__list {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+    font-family: "Gagalin";
+    color: rgb(255, 255, 255);
+    line-height: 2.008;
+}
+
+.team__item {
+    &:hover {
+        color: $yellow;
+    }
+}
+  
 // ending team
 
 
@@ -425,25 +469,26 @@
 // SIDEMENU
 
 .side-menu {
-    /* background: #fff; */
+    // background: #fff;
     position: fixed;
+    left: 98%;
+    top: 5%;
+}
+
+.side-menu__list {
+    height: rem(150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .side-menu__item {
-    padding: 0px;
+    // width: 10px;
+    // height: 10px;
+    // border-radius: 50%;
+    // background: #fff;
+
 }
 
-.side-menu__item__circle {
-    display: block;
-    width: 16px;
-    height: 16px;
-    padding: 12px 0px;
-    background: url(../img/main-pg/nav.png) 0 0 no-repeat;
-    margin-left: 64px;
-}
 
-.side-menu__item__circle-activ {
-    background: url(../img/main-pg/nav-activ.png) 0 0 no-repeat;
-    margin-left: 59px;
-}
 

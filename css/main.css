@@ -287,7 +287,63 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f8b43a; }
 
 #section__team {
-  background-image: url(../img/team/bkgroung.jpg); }
+  background-image: url(../img/team/bkgroung.jpg);
+  background-position: inherit;
+  position: relative; }
+
+.team {
+  position: absolute;
+  border: grey 1px solid;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.team-container {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-top: 5%;
+  padding-left: 20%; }
+
+.accordeon {
+  height: 80%; }
+
+.team__list {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: white;
+  line-height: 2.008; }
+
+.team__item:hover {
+  color: #f8b43a; }
 
 #section__menu {
   background-image: url("../img/menu/bkground.jpg"); }
@@ -558,20 +614,18 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../img/map-pg/bkgroung.jpg"); }
 
 .side-menu {
-  /* background: #fff; */
-  position: fixed; }
+  position: fixed;
+  left: 98%;
+  top: 5%; }
 
-.side-menu__item {
-  padding: 0px; }
-
-.side-menu__item__circle {
-  display: block;
-  width: 16px;
-  height: 16px;
-  padding: 12px 0px;
-  background: url(../img/main-pg/nav.png) 0 0 no-repeat;
-  margin-left: 64px; }
-
-.side-menu__item__circle-activ {
-  background: url(../img/main-pg/nav-activ.png) 0 0 no-repeat;
-  margin-left: 59px; }
+.side-menu__list {
+  height: 9.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
