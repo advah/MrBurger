@@ -1,46 +1,8 @@
+@import "normalize.scss";
 @import "fonts.scss";
 @import "var&mixin.scss";
 @import "base.scss";
 @import "header.scss";
-
-%section-bg {
-    background-repeat: no-repeat;
-    background-position: center, center;
-    background-size: cover;
-}
-
-@mixin rewies-bg ($rewiews-bg) {
-    width: 25%;
-    height: 50%;
-    background-image: url($rewiews-bg);
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.section {
-    height: 100%;
-    width: 100%;
-    min-height: 650px;
-}
-
-.container {
-    width: 1100px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.heading {
-    font-family: "gagalin";
-    color: $yellow;
-    font-size: rem(72px);
-}
-
 
 /*MAIN-pg*/
 
@@ -78,7 +40,7 @@
 }
 
 .main__text {
-    font-family: lifehackmedium;
+    font-family: lifehack;
     font-weight: 500;
     color: #fff;
     font-size: rem(65px);
@@ -160,7 +122,7 @@
 
 .we__item__heading {
     font-size: 24px;
-    font-family: "lifehackmedium";
+    font-family: "lifehack";
     color: rgb(47, 50, 52);
     padding-top: 18px;
 }
@@ -191,13 +153,15 @@
 
 .team {
     position: absolute;
-    border: grey 1px solid;
-    width: 50%;
-    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: rgba(#2f3234, .9 );
 }
 
 .team-container {
@@ -219,18 +183,69 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 14px;
-    font-family: "Gagalin";
+
     color: rgb(255, 255, 255);
     line-height: 2.008;
 }
 
-.team__item {
-    &:hover {
+.team__item-activ {
+    .accordeon__content {
+        height: auto;
+    }
+
+    .team__member {
         color: $yellow;
     }
+
+    &::before {
+        transform: rotate(180deg);
+    }
 }
-  
+
+.team__item {
+
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: rem(10px) solid transparent;
+        border-top-color: $yellow;
+        border-bottom-width: 0px; 
+    }
+}
+
+.accordeon__content {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+}
+
+.team__member {
+    font-size: 14px;
+    font-family: "gagalin";
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.accordion__content {
+    display: none;
+}
+
+.accordeon__pic {
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+    overflow: hidden;
+    // flex-basis: 100%;
+    // min-width: 100%;
+}  
 // ending team
 
 
@@ -499,4 +514,8 @@
 }
 
 
-
+// FOOTER
+footer {
+    position: relative;
+    width: 100%;
+}

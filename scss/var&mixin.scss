@@ -4,14 +4,47 @@ $yellow: #f8b43a;
 $green: #8ac03e;
 $dark: #2f3234;
 
+@mixin placecolor($color: #000000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+}
+
+// миксин кружков для меню навигации хедера
 @mixin circle($width, $color) {
     width: $width;
     height: $width;
     border-radius: $width/2;
     background-color: $color;
-  }
+}
 
-  @function rem($px) {
-    @return $px / 16px+0rem;
-  }
+// переводит в относительные ед изм
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
 
+// бкграунд для фото секции Отзывы
+@mixin rewies-bg ($rewiews-bg) {
+  width: 25%;
+  height: 50%;
+  background-image: url($rewiews-bg);
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// бкграунд в секциях
+%section-bg {
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+}
