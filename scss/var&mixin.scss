@@ -32,16 +32,6 @@ $dark: #2f3234;
   @return $px / 16px+0rem;
 }
 
-// бкграунд для фото секции Отзывы
-@mixin rewies-bg ($rewiews-bg) {
-  width: 25%;
-  height: 50%;
-  background-image: url($rewiews-bg);
-  background-position: center, center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 // бкграунд в секциях
 %section-bg {
   background-repeat: no-repeat;

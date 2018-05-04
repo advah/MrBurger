@@ -266,9 +266,6 @@
     height: 100%;
     background-image: url('../img/reviews/bkground.png');
     @extend %section-bg;
-    // background-position: center, center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     display: flex;
 }
 
@@ -291,41 +288,13 @@
     display: block;
     width: 25%;
     height: 50%;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
+    filter: grayscale(100%);
 }
 
-.reviews__item--one {
-    @include rewies-bg('../img/reviews/photo-1.jpg');
-
-}
-
-.reviews__item--two {
-    @include rewies-bg('../img/reviews/photo-2.jpg');
-}
-
-.reviews__item--three {
-    @include rewies-bg('../img/reviews/photo-3.jpg');
-}
-
-.reviews__item--fore {
-    @include rewies-bg('../img/reviews/photo-4.jpg');
-}
-
-.reviews__item--five {
-    @include rewies-bg('../img/reviews/photo-5.jpg');
-}
-
-.reviews__item--six {
-    @include rewies-bg('../img/reviews/photo-6.jpg');
-}
-
-.reviews__item--seven {
-    @include rewies-bg('../img/reviews/photo-7.jpg');
-}
-
-.reviews__item--eight {
-    @include rewies-bg('../img/reviews/photo-8.jpg');
-}
 
 .reviews__item-wrap {
     display: flex;
