@@ -4,6 +4,24 @@ $yellow: #f8b43a;
 $green: #8ac03e;
 $dark: #2f3234;
 
+
+$phones: 480px;
+
+@mixin phones {
+  @media screen and (max-width:$phones) {
+    @content;
+  }
+}
+
+$tablets: 768px;
+
+@mixin tablets {
+  @media screen and (max-width:$tablets) {
+    @content;
+  }
+}
+
+
 @mixin placecolor($color: #000000) {
   &::-webkit-input-placeholder {
     color: $color;
@@ -19,6 +37,7 @@ $dark: #2f3234;
   }
 }
 
+
 // миксин кружков для меню навигации хедера
 @mixin circle($width, $color) {
     width: $width;
@@ -27,10 +46,12 @@ $dark: #2f3234;
     background-color: $color;
 }
 
+
 // переводит в относительные ед изм
 @function rem($px) {
   @return $px / 16px+0rem;
 }
+
 
 // бкграунд в секциях
 %section-bg {

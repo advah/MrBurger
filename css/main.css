@@ -372,8 +372,9 @@ p {
 
 .wrapper {
   position: relative;
-  min-width: 960px;
-  height: 100%; }
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
 
 .section {
   height: 100vh;
@@ -383,9 +384,12 @@ p {
 .container {
   position: relative;
   width: 95%;
-  min-width: 58.75rem;
+  max-width: 940px;
   min-height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .heading {
   font-family: "gagalin";
@@ -574,31 +578,31 @@ p {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 0px 25px; }
+  padding: 0rem 1.5625rem; }
 
 .we__item__pic-wrap--meat {
   width: 97px;
-  height: 89px;
+  height: 5.5625rem;
   background: url(../img/we-pg/meat.png) 0 0 no-repeat; }
 
 .we__item__pic-wrap--hang {
-  width: 73px;
-  height: 85px;
+  width: 4.5625rem;
+  height: 5.3125rem;
   background: url(../img/we-pg/hand.png) 0 0 no-repeat; }
 
 .we__item__pic-wrap--natural {
-  width: 88px;
-  height: 75px;
+  width: 5.5rem;
+  height: 4.6875rem;
   background: url(../img/we-pg/natural.png) 0 0 no-repeat; }
 
 .we__item__heading {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "lifehack";
   color: #2f3234;
-  padding-top: 18px; }
+  padding-top: 1.125rem; }
 
 .we__item__text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: rgba(47, 50, 52, 0.8); }
 
 #section__burger {
@@ -688,7 +692,7 @@ p {
   overflow: hidden; }
 
 .team__member {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "gagalin";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -700,7 +704,7 @@ p {
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 10px; }
+  margin-bottom: 0.625rem; }
 
 .accordion__content {
   display: none; }
@@ -766,7 +770,7 @@ p {
   width: 100%;
   height: 100%;
   background: rgba(47, 50, 52, 0);
-  padding: 50px 20px; }
+  padding: 3.125rem 1.25rem; }
 
 .reviews__item-wrap:hover {
   background: rgba(47, 50, 52, 0.6);
@@ -795,22 +799,22 @@ p {
 
 .reviews__item__header {
   display: block;
-  margin-bottom: 25px;
-  font-size: 14px;
+  margin-bottom: 1.5625rem;
+  font-size: 0.875rem;
   font-family: "gagalin";
   line-height: 2.008;
   color: rgba(47, 50, 52, 0); }
 
 .reviews__item__text {
   display: block;
-  margin-bottom: 15px;
-  font-size: 14px;
+  margin-bottom: 0.9375rem;
+  font-size: 0.875rem;
   color: rgba(47, 50, 52, 0); }
 
 .reviews__item__btn {
   display: inline-block;
-  padding: 15px 10px;
-  font-size: 13px;
+  padding: 0.9375rem 0.625rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
   color: rgba(47, 50, 52, 0);
@@ -855,7 +859,7 @@ p {
   text-transform: uppercase; }
 
 .form {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
   line-height: 1.714; }
@@ -899,8 +903,8 @@ p {
   width: 100%; }
 
 .form__label, .form__input {
-  margin-right: 20px;
-  margin-bottom: 10px;
+  margin-right: 1.25rem;
+  margin-bottom: 0.625rem;
   border-radius: 5px; }
 
 .form__input {
