@@ -1,23 +1,22 @@
 *, *::before, *::after { 
   box-sizing: border-box; 
 }
+  
+body, html {
+  height: 100%;
+  font-size: 16px;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-size: rem(16px);
-  @include ubuntu();
+  font-size: rem(14px);
+  @include ubuntu(light);
   line-height: 1.42;
   color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-}
-  
-
-  
-body, html {
-  height: 100%;
 }
   
 ul {
