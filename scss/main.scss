@@ -260,6 +260,7 @@
     background-image: url('../img/menu/bkground.jpg');
     @extend %section-bg;
     display: flex;
+    position: relative;
 }
 
 .menu__title-container {
@@ -272,9 +273,13 @@
 }
 
 .menu__accordeon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: flex-end;
-    width: 75%;
+    width: 65%;
 }
 
 .menu__item {
@@ -293,7 +298,9 @@
 }
 
 .menu__accordeon__title-content {
-    transform: rotate(270deg);
+    // transform: rotate(270deg);
+    // transform-origin: 0 0;
+    transform: rotateZ(-90deg);
     transform-origin: 0 0;
 }
 

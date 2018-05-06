@@ -734,7 +734,8 @@ p {
   background-image: url("../img/menu/bkground.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative; }
 
 .menu__title-container {
   padding-top: 100px;
@@ -749,13 +750,17 @@ p {
   min-width: 35%; }
 
 .menu__accordeon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  width: 75%; }
+  width: 65%; }
 
 .menu__item {
   color: #fff;
@@ -781,9 +786,9 @@ p {
   justify-content: flex-end; }
 
 .menu__accordeon__title-content {
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
+  -webkit-transform: rotateZ(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotateZ(-90deg);
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0; }
