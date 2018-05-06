@@ -259,79 +259,71 @@
 #menu {
     background-image: url('../img/menu/bkground.jpg');
     @extend %section-bg;
-    display: flex;
     position: relative;
 }
+
+    .menu__H1-wrap {
+        padding: 80px 100px;
+
+        & .heading__menu {
+            color: #fff;
+        }
+    }
+
+    .menu__accordeon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        display: flex;
+
+    }
+
+        .menu__item {
+            color: #fff;
+            display: flex;
+        }
+
 
 .menu__title-container {
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    // использовать когда flex не слушается
-    flex-basis: 35%;
-    min-width: 35%;
-}
-
-.menu__accordeon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    width: 65%;
-}
-
-.menu__item {
-    color: #fff;
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-.menu__accordeon__title-wrap {
     position: relative;
     width: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    height: 100vh;
 }
 
-.menu__accordeon__title-content {
-    // transform: rotate(270deg);
-    // transform-origin: 0 0;
+.menu__title-wrap {
+    position: absolute;
+    bottom: 0;
     transform: rotateZ(-90deg);
     transform-origin: 0 0;
 }
 
-
-.menu__accordeon__title {
+.menu__acco-title {
     font-family: 'gagalin';
-    text-transform: uppercase;
-    font-size: rem(40px);
+    font-size: 40px;
     white-space: nowrap;
-
 }
 
-.menu__item__text {
-    background-color: rgb(47, 50, 52);
-    opacity: 0.929;
+.menu__content {
+    background-color: $dark;
+    opacity: .9;
     height: 100vh;
     width: 0;
     overflow: hidden;
-        
 }
 
 .menu__item-activ {
-    & .menu__accordeon__title {
-        color: $yellow;    
+    
+    & .menu__content {
+        width: 540px;
+        padding: 35px 60px;
     }
-    & .menu__item__text {
-        width: rem(540px);
-        padding: rem(55px) rem(35px);
+
+    & .menu__acco-title {
+    color: $yellow;
     }
 }
-
 
 // ending меню
   

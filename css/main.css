@@ -732,60 +732,37 @@ p {
 
 #menu {
   background-image: url("../img/menu/bkground.jpg");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative; }
 
-.menu__title-container {
-  padding-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-preferred-size: 35%;
-  flex-basis: 35%;
-  min-width: 35%; }
+.menu__H1-wrap {
+  padding: 80px 100px; }
+  .menu__H1-wrap .heading__menu {
+    color: #fff; }
 
 .menu__accordeon {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  width: 65%; }
+  display: flex; }
 
 .menu__item {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  display: flex; }
 
-.menu__accordeon__title-wrap {
+.menu__title-container {
   position: relative;
   width: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  height: 100vh; }
 
-.menu__accordeon__title-content {
+.menu__title-wrap {
+  position: absolute;
+  bottom: 0;
   -webkit-transform: rotateZ(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotateZ(-90deg);
@@ -793,25 +770,24 @@ p {
   -ms-transform-origin: 0 0;
   transform-origin: 0 0; }
 
-.menu__accordeon__title {
+.menu__acco-title {
   font-family: 'gagalin';
-  text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 40px;
   white-space: nowrap; }
 
-.menu__item__text {
+.menu__content {
   background-color: #2f3234;
-  opacity: 0.929;
+  opacity: .9;
   height: 100vh;
   width: 0;
   overflow: hidden; }
 
-.menu__item-activ .menu__accordeon__title {
-  color: #f8b43a; }
+.menu__item-activ .menu__content {
+  width: 540px;
+  padding: 35px 60px; }
 
-.menu__item-activ .menu__item__text {
-  width: 33.75rem;
-  padding: 3.4375rem 2.1875rem; }
+.menu__item-activ .menu__acco-title {
+  color: #f8b43a; }
 
 /*REVIEWS*/
 #section__reviews {
