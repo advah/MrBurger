@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Задание 2</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <div id="container">  
+        
+        <H2>Задание 1:</H2>
+
+        <ol>
+            <li>При помощи DOM API создайте DOM-элемент с тегом div</li>
+            <li>Добавьте созданный элемент в DOM-дерево</li>
+            <li>При помощи DOM API,<br>
+                поместите в элемент текст:<br>
+                'Этот элемент создан при помощи DOM API'
+            </li>
+        </ol>
+
+        <h2>Задание 2</h2>
+
+        <ol>
+            <li>При помощи DOM API создайте элемент с тегом div</li>
+            <li>Задайте созданному элементу класс 'inner'</li>
+            <li>При помощи DOM API, поместите в элемент текст:<br>
+                'Этот элемент тоже создан при помощи DOM API'
+            </li>
+            <li>Поместите созданный элемент внутрь элемента,<br>
+                который был создан в предыдущем задании
+            </li>
+        </ol>
+
+        <h2>Задание 3</h2>
+
+        <ol>
+            <li>Возьмите код из предыдущего задания<br>
+                и при помощи DOM API задайте<br>
+                созданному элементу CSS-стиль 'color: red'
+            </li>
+        </ol>
+
+        <h2>Задание 4</h2>
+
+        <ol>
+            <li>Возьмите код первого задания</li>
+            <li>Добавьте обработчик события click на созданный элемент</li>
+            <li>При клике на элемент, в консоль должен выводиться текст:<br>
+                'Этот текст говорит о том, что я всё сделал правильно'
+            </li>
+            <li>Откройте страничку в браузере</li>
+            <li>Кликните на элемент</li>
+            <li>Убедитесь, что после клика на элемент<br>
+                в консоли появилась надпись с текстом<br>
+                'Этот текст говорит о том, что я всё сделал правильно'
+            </li>
+        </ol>
+
+
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function(){
+                const firstLesson = document.querySelector('#lesson');
+                console.log(firstLesson);
+                const appendDiv = document.createElement('div');
+                console.log(appendDiv);
+
+                // первый урок
+                firstLesson.appendChild(appendDiv);
+                appendDiv.textContent = 'Этот элемент создан при помощи DOM API';
+
+                // второй урок
+                const secondLesson = document.createElement('div');
+                secondLesson.classList.add("inner");
+                console.log(secondLesson);
+                secondLesson.textContent = 'Этот элемент тоже создан при помощи DOM API';
+                firstLesson.firstElementChild.appendChild(secondLesson);
+
+                // третий урок
+                secondLesson.style.color='red';
+
+                // четвертый урок
+                appendDiv.addEventListener('click', function(){
+                    console.log('Этот текст говорит о том, что я всё сделал правильно');
+                });
+            });
+
+        </script>
+
+        <div id="lesson">
+
+        </div>
+
+    </div>
+
+</div>    
+</body>
+</html>
