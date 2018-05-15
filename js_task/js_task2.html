@@ -66,26 +66,26 @@
             // первый урок
             document.addEventListener('DOMContentLoaded', function(){
                 const firstLesson = document.querySelector('#lesson');
-                console.log(firstLesson);
+           
                 const appendDiv = document.createElement('div');
-                console.log(appendDiv);
+          
                 firstLesson.appendChild(appendDiv);
                 appendDiv.textContent = 'Этот элемент создан при помощи DOM API';
 
              // второй урок
                 const secondLesson = document.createElement('div');
-                secondLesson.classList.add("inner");
-                console.log(secondLesson);
-                secondLesson.textContent = 'Этот элемент тоже создан при помощи DOM API';
-                firstLesson.firstElementChild.appendChild(secondLesson);
+                // secondLesson.classList.add("inner");
+                // secondLesson.textContent = 'Этот элемент тоже создан при помощи DOM API';
+                // firstLesson.firstElementChild.appendChild(secondLesson);
 
-             // третий урок
-                secondLesson.style.color='red';
+                // console.log(firstLesson.lastElementChild);
+                // firstLesson.lastElementChild.classList.add('inner');
+                // firstLesson.lastElementChild.textContent = 'Этот элемент тоже создан при помощи DOM API';
 
-             // четвертый урок
-                appendDiv.addEventListener('click', function(){
-                    console.log('Этот текст говорит о том, что я всё сделал правильно');
-                });
+                console.log(firstLesson.innerHTML);
+                const innerDiv = firstLesson.innerHTML;
+                appendDiv.appendChild(firstLesson.innerHTML);
+
             });
 
         </script>
