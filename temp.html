@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +29,13 @@
 
         const template = document.querySelector('#template');
         var popupContent = template.innerHTML;
-        var popupTriger = popupFunc(popupContent);
-
+        var popupTriger = popupFunc(popupContent); 
+        var popupGreeting = 'Привет, loftshcool!';
+        console.log(popupGreeting);
         const button = document.querySelector('.button');
         button.addEventListener('click', function() {
             popupTriger.open();
+            popupTriger.textContent(popupGreeting);
         });
     
 
@@ -43,22 +45,30 @@
             tempWrap.innerHTML = content;
             
             let popup = tempWrap.querySelector('.popup');
-            let popurText = tempWrap.querySelector('.popup__text');
+            var popupText = tempWrap.querySelector('.popup__text');
+            
             let closeBtn = tempWrap.querySelector('.close-btn');
 
             tempWrap = null;
 
-            popur.addEventListener('click', e=> {
-                if(e.target === popur) {
-                    closeBtn.close();
+            popup.addEventListener('click', e=> {
+                if(e.target === popup) {
+                    closeBtn.click();
                 };
-                
-                closeBtn.addEventListener('click', function() {
-                    
-                });
             });
 
+            closeBtn.addEventListener('click', function() {
+                document.body.removeChild(popup);
+            });
             
+            return {
+                open() {
+                    document.body.appendChild(popup);
+                },
+                textContent(text) {
+                    popupText.textContent = text;
+                }
+            };
         };
  
     </script>

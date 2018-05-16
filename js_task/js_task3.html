@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Задание 3</title>
+</head>
+<body>
+    
+    <h2>Задание 1</h2>
+    
+    function filter(input, than) { <br>
+     <p>   
+        // напишите здесь код, который возвращает новый массив<br>
+        // в котором содержатся те элементы input, которые больше than
+    </p>
+
+    }
+
+    <p>
+        var array = [12, 100, 34, 65, 10];<br>
+        var result = filter(array, 60);<br>
+        <br>
+        console.log(result); // [100, 65];<br>
+        <br>
+        result = filter(array, 20);<br>
+        console.log(result); // [100, 34, 65];
+    </p>
+
+    <h2>Задание 2</h2>
+
+    <ol>
+        <li>Возьмите код предыдущего задания</li>
+
+        <li>
+            <p>
+                Модифицируйте код функции filter так,<br>
+                чтобы функция выбрасывала исключения<br>
+                при следующих условиях: 
+            </p>
+            <ol type="a">
+                <li>В input передан пустой массив</li>
+
+                <li>
+                    Хотя бы один из элементов input не является числом
+                </li>
+
+                <li>
+                    Хотя бы один из элементов input
+                    является отрицательным числом
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+    <script>
+    
+        
+        var array = [12, 100, 34, 65, 10];
+        var then = 20;
+
+        try {
+            var result = filter(array, then);
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        function filter(input, than) {
+
+            if (input.length == 0) {
+                throw new Error ('не должен быть пустым');
+            }
+
+            let newArrey = [];
+            
+            for (i=0; i<array.length; i++) {
+                
+                if (!isFinite(input[i])) {
+                    throw new Error ('в массиве должны содержаться только числа');
+                }
+
+                else if (input[i] < 0) {
+                    throw new Error ('в массиве долны содержаться только положительные числа');
+                }
+
+                if (input[i] > then) {
+                    let j = newArrey.length;  
+                    var x3 = [];
+                    newArrey[j] = input[i];
+                }
+            }
+
+            return newArrey;       
+        };
+
+        console.log(result);
+
+    </script>
+
+</body>
+</html>
