@@ -183,9 +183,7 @@
     flex-direction: column;
     justify-content: space-around;
     @include ubuntu (light);
-    font-size: rem(14px);
-    color: rgb(255, 255, 255);
-    line-height: 1.714;
+  
 }
 
 .team__item-activ {
@@ -203,7 +201,11 @@
 }
 
 .team__item {
-
+    font-size: rem(14px);
+    color: rgb(255, 255, 255); 
+    font-family: "gagalin";
+    line-height: 2.008;
+      
     &::before {
         content: "";
         display: block;

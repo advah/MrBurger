@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #element {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 15px;
+
+
+    }
+    </style>
+</head>
+<body>
+
+    <h1 style="display: inline">Привет,</h1> loftshcool!
+    <br>
+
+    <button id="loadButton">Load</button>
+
+    <div>
+        <div id="element">Привет!</div>
+    </div>
+
+    <div class="gallery"></div>
+
+    <script>
+        var loadtButton = document.querySelector('#loadButton');
+        var gallery = document.querySelector('.gallery');
+        var urls = [
+            'https://wallpaperscraft.com/image/space_atlantis_nebula_start_103363_1280x1024.jpg',
+            'https://wallpaperscraft.com/image/space_flight_sky_stars_82970_1280x1024.jpg',
+            'http://eskipaper.com/images/space-wallpaper-35.jpg'
+        ];
+
+        function loadImage(urls) {
+            const promise = new Promise(function(resolve) {
+                const img = document.createElement('img');
+                gallery.appendChild(img);
+                img.src = urls;
+                img.addEventListener('load', function(){
+                    resolve();
+                });
+            });
+
+            return promise;
+        }
+
+        loadtButton.addEventListener('click', function() {
+            loadImage(urls[0])
+            .then(function() {
+                console.log('картинка 1 загружена');
+
+                return loadImage(urls[1]);
+            })
+            .then(function(){
+                console.log('картинка 2 загружена'); 
+
+                return loadImage(urls[2]);
+            })
+            .then(function() {
+                console.log('картинка 3 загруженна');
+            });
+            
+
+        });
+
+    </script>
+
+</body>
+</html>
+

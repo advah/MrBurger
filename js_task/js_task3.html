@@ -58,20 +58,17 @@
     
         
         var array = [12, 100, 34, 65, 10];
-        var then = 20;
-
+        var then = 60;
         try {
             var result = filter(array, then);
         } catch (e) {
             console.log(e.message);
         }
-
+        
         function filter(input, than) {
-
             if (input.length == 0) {
                 throw new Error ('не должен быть пустым');
             }
-
             let newArrey = [];
             
             for (i=0; i<array.length; i++) {
@@ -79,23 +76,18 @@
                 if (!isFinite(input[i])) {
                     throw new Error ('в массиве должны содержаться только числа');
                 }
-
                 else if (input[i] < 0) {
                     throw new Error ('в массиве долны содержаться только положительные числа');
                 }
-
                 if (input[i] > then) {
                     let j = newArrey.length;  
                     var x3 = [];
                     newArrey[j] = input[i];
                 }
             }
-
             return newArrey;       
         };
-
         console.log(result);
-
     </script>
 
 </body>

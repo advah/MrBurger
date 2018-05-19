@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #element {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 15px;
+
+
+    }
+    </style>
+</head>
+<body>
+
+    <h1 style="display: inline">Привет,</h1> loftshcool!
+    <br>
+
+    <button id="startButton">вперед</button>
+    <button id="stoptButton">stop</button>
+
+    <div>
+        <div id="element">Привет!</div>
+    </div>
+
+    <script>
+    
+    var startButton = document.querySelector('#startButton');
+        var stopButton = document.querySelector('#stoptButton');
+
+        var intervalId;
+
+        var element = document.querySelector('#element');
+        const computed = getComputedStyle(element);
+        var elementStyleTop = parseInt(computed.top);
+        var elementStyleLeft = parseInt(computed.left);
+
+        var step = 1;
+    
+        var moveUp;
+        var moveLeft;
+
+        moveUp = false;
+        moveLeft = true;
+
+        startButton.addEventListener('click', function() {
+  
+
+            if(!moveUp) {    
+                intervalId = setInterval(function() {
+                    if (elementStyleTop < 600) {
+                        elementStyleTop += step;
+                        element.style.top = elementStyleTop + 'px';
+                    } else {
+                        clearInterval(intervalId);
+                        moveUp = true;
+                        console.log(moveUp);
+                        startButton.click;
+                    }
+                }, 10);
+            } else {
+                intervalId = setInterval(function() {
+                    if (elementStyleTop > 0) {
+                        elementStyleTop -= step;
+                        element.style.top = elementStyleTop + 'px';
+                    } else {
+                        clearInterval(intervalId);
+                        moveUp = false;
+                        console.log(moveUp);
+                        }
+                }, 10);
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+
