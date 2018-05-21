@@ -139,6 +139,105 @@
 #section__burger {
     background-color: $yellow;
 }
+
+.burgers-pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgers__wrap {
+    display: flex;
+    width: rem(940px);
+    height: rem(480px);
+    overflow: hidden;
+}
+
+.burgers__list {
+    display: flex;
+    position: relative;
+    will-change: right;
+    transition: right 1s;
+}
+
+.burgers__item {
+    width: rem(940px);
+    height: rem(480px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.burger__img-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.burgers__H1-wrap {
+    margin-bottom: 40px;
+}
+
+.heading__burgers {
+    color: #fff;
+    line-height: 1;
+}
+
+.burgers__content-wrap {
+    display: flex;
+    flex-direction: column;   
+}
+
+.burgers__description {
+    font-size: rem(14px);
+    font-family: "ubuntu";
+    color: rgb(255, 255, 255);
+    line-height: 1.714;   
+    padding-bottom: rem(40px);
+}
+
+.burger__order-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.burgers__prise-wrap {
+        font-size: rem(30px);
+        font-family: "gagalin";
+        color: $orange;
+        line-height: 0.39;
+        margin-right: rem(20px);
+}
+
+.burgers__prise {
+    font-size: rem(72px);
+    font-family: "gagalin";
+    line-height: 0.39;  
+}
+
+.burger__arrow {
+    position: absolute;
+    width: rem(15px);
+    height: rem(27px);
+}
+
+.burger__arrow-right {
+    background: url(../img/burgers/arrow-right.png) 0 0 no-repeat;
+    right: -5%;
+}
+
+.burger__arrow-left {
+    background: url(../img/burgers/arrow-left.png) 0 0 no-repeat;
+    left: -5%;
+}
+
 // ending burgers
 
 

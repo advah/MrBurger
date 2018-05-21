@@ -446,7 +446,7 @@ p {
   display: inline-block;
   /* letter-spacing: 2px; */ }
 
-.header__btn {
+.order__btn {
   margin: 0px; }
 
 .order-ref {
@@ -608,6 +608,124 @@ p {
 
 #section__burger {
   background-color: #f8b43a; }
+
+.burgers-pg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.burgers__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 58.75rem;
+  height: 30rem;
+  overflow: hidden; }
+
+.burgers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  will-change: right;
+  -webkit-transition: right 1s;
+  -o-transition: right 1s;
+  transition: right 1s; }
+
+.burgers__item {
+  width: 58.75rem;
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.burger__img-wrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.burger__content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.burgers__H1-wrap {
+  margin-bottom: 40px; }
+
+.heading__burgers {
+  color: #fff;
+  line-height: 1; }
+
+.burgers__content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.burgers__description {
+  font-size: 0.875rem;
+  font-family: "ubuntu";
+  color: white;
+  line-height: 1.714;
+  padding-bottom: 2.5rem; }
+
+.burger__order-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.burgers__prise-wrap {
+  font-size: 1.875rem;
+  font-family: "gagalin";
+  color: #e25028;
+  line-height: 0.39;
+  margin-right: 1.25rem; }
+
+.burgers__prise {
+  font-size: 4.5rem;
+  font-family: "gagalin";
+  line-height: 0.39; }
+
+.burger__arrow {
+  position: absolute;
+  width: 0.9375rem;
+  height: 1.6875rem; }
+
+.burger__arrow-right {
+  background: url(../img/burgers/arrow-right.png) 0 0 no-repeat;
+  right: -5%; }
+
+.burger__arrow-left {
+  background: url(../img/burgers/arrow-left.png) 0 0 no-repeat;
+  left: -5%; }
 
 #section__team {
   background-image: url(../img/team/bkgroung.jpg);
