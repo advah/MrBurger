@@ -606,7 +606,7 @@ p {
   font-size: 0.875rem;
   color: rgba(47, 50, 52, 0.8); }
 
-#section__burger {
+#section__burgers {
   background-color: #f8b43a; }
 
 .burgers-pg {
@@ -628,7 +628,7 @@ p {
   height: 30rem;
   overflow: hidden; }
 
-.burger__img {
+.burgers__img {
   width: 29.375rem;
   -o-object-fit: fill;
   object-fit: fill; }
@@ -670,7 +670,7 @@ p {
   font-size: 14px;
   font-family: "gagalin"; }
 
-.burger__composition {
+.burgers__composition {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,9 +690,10 @@ p {
   background-color: #f08c33;
   border-radius: 7px;
   color: white;
-  line-height: 2.008; }
+  line-height: 2.008;
+  cursor: help; }
 
-.burger__calories {
+.burgers__calories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,7 +710,7 @@ p {
   color: rgba(255, 255, 255, 0.502);
   line-height: 1.714; }
 
-.burger__img-wrap {
+.burgers__img-wrap {
   width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -722,7 +723,7 @@ p {
   align-items: center;
   padding-top: 2.5rem; }
 
-.burger__content {
+.burgers__content {
   width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -759,7 +760,7 @@ p {
   line-height: 1.714;
   padding-bottom: 2.5rem; }
 
-.burger__order-wrap {
+.burgers__order-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -778,16 +779,16 @@ p {
   font-family: "gagalin";
   line-height: 0.39; }
 
-.burger__arrow {
+.burgers__arrow {
   position: absolute;
   width: 0.9375rem;
   height: 1.6875rem; }
 
-.burger__arrow-right {
+.burgers__arrow-right {
   background: url(../img/burgers/arrow-right.png) 0 0 no-repeat;
   right: -5%; }
 
-.burger__arrow-left {
+.burgers__arrow-left {
   background: url(../img/burgers/arrow-left.png) 0 0 no-repeat;
   left: -5%; }
 
@@ -975,7 +976,13 @@ p {
   width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
 
 .menu__item {
   color: #fff;
@@ -987,6 +994,18 @@ p {
   position: relative;
   width: 80px;
   height: 100vh; }
+
+.menu__title-container-meat {
+  background: url(../img/menu/bkground-meat.jpg) center center no-repeat;
+  background-size: cover; }
+
+.menu__title-container-vegan {
+  background: url(../img/menu/bkground-vegan.jpg) center center no-repeat;
+  background-size: cover; }
+
+.menu__title-container-diet {
+  background: url(../img/menu/bkground-diet.jpg) center center no-repeat;
+  background-size: cover; }
 
 .menu__title-wrap {
   position: absolute;
@@ -1001,7 +1020,8 @@ p {
 .menu__acco-title {
   font-family: 'gagalin';
   font-size: 40px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  cursor: pointer; }
 
 .menu__content {
   background-color: #2f3234;

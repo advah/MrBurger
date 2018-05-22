@@ -5,8 +5,8 @@
 const burgersList = document.querySelector('.burgers__list');
 const comutedItemStyle = getComputedStyle(burgersList);
 
-const btnRight = document.querySelector('.burger__arrow-right');
-const btnLeft = document.querySelector('.burger__arrow-left');
+const btnRight = document.querySelector('.burgers__arrow-right');
+const btnLeft = document.querySelector('.burgers__arrow-left');
 
 // шаг на который происходит прокрутка
 // ширина всего списка из всех итемов деленное на количество итемов в списке
@@ -55,8 +55,8 @@ btnLeft.addEventListener('click', function(event) {
     // const burgersList уже объявлена выше, в отлеле Слайдер, перед функцией
     burgersList.addEventListener('mouseover', function(event) {
 
-        if(event.target.className == 'burger__composition' 
-         || event.target.className == 'burger__composition-pic' 
+        if(event.target.className == 'burgers__composition' 
+         || event.target.className == 'burgers__composition-pic' 
          || event.target.className == 'burgers__composition-text') {
             jsBlockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
             event.target.appendChild(jsBlockIngredients);
@@ -67,7 +67,7 @@ btnLeft.addEventListener('click', function(event) {
 
     burgersList.addEventListener('mouseout', function(event) {
 
-        if(event.target.className == 'burger__composition') {
+        if(event.target.className == 'burgers__composition') {
             event.target.removeChild(jsBlockIngredients);
         };
         
@@ -82,7 +82,6 @@ btnLeft.addEventListener('click', function(event) {
 
 
 // list ul-accordeon, таргет string , класс актив string 
-
 var accordeon = function(list, eventTarget, activClass) { 
    
     // обработчик событий на ul аккордеоне
@@ -131,3 +130,45 @@ accordeon(teamList, teamRef, teamClassActiv);
 
 // endTeam----------
 
+// MENU--------------------
+
+var accordeon = function(list, eventTarget, activClass) { 
+   
+    // обработчик событий на ul аккордеоне
+    list.addEventListener('click', function(event) {
+
+        // проверяет попал ли клик куда ожидалось
+        if (event.target.className === eventTarget) {
+            
+            
+            // ли предок ссылки, нахожу что бы удалять и добавлять класс activ
+            const dad = event.target.parentNode.parentNode.parentNode;
+            console.log(dad);
+            
+            if(dad.classList.contains (activClass)) {
+                dad.classList.remove(activClass);
+        
+            }
+            // if обрабатывает li на который был клик, есть ли у него класс актив
+            // а else проверяет, нет ли класса activ у остальных li и удаляет их
+            else {
+                let j = list.children
+                for (let i of j) {
+                    if(i.classList.contains (activClass)) {
+                        i.classList.remove(activClass);   
+                    }                                        
+                }
+                // теперь класс activ отсутствует во всех li обработаных else
+                // добавляется activ на li по которому клик
+                dad.classList.add(activClass);
+            }
+        }
+
+    });
+};
+
+const menuAcco = document.querySelector('.menu__accordeon');
+const menuTarget = "menu__acco-title";
+const menuClassActiv = "menu__item-activ";
+
+accordeon(menuAcco, menuTarget, menuClassActiv);
