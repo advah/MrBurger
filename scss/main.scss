@@ -153,11 +153,16 @@
     overflow: hidden;
 }
 
+.burger__img {
+    width: rem(470px);
+    object-fit: fill;
+}
+
 .burgers__list {
     display: flex;
     position: relative;
     will-change: right;
-    transition: right 1s;
+    transition: right .3s;
 }
 
 .burgers__item {
@@ -167,18 +172,53 @@
     flex-wrap: wrap;
 }
 
-.burger__img-wrap {
-    width: 50%;
+.burgers__characteristics {
+    width: 10%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    font-size: 14px;
+    font-family: "gagalin";
 }
 
-.burger__content {
-    width: 50%;
+.burger__composition {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: rem(90px);
+    height: rem(90px);
+    background-color: #f08c33;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    line-height: 2.008;
+}
+
+.burger__calories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.502);
+    line-height: 1.714;
+}
+ 
+.burger__img-wrap {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: rem(40px);
+}
+
+.burger__content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
 }
 
 .burgers__H1-wrap {
@@ -237,7 +277,41 @@
     background: url(../img/burgers/arrow-left.png) 0 0 no-repeat;
     left: -5%;
 }
+// -------------------------
+// BURGERS TEMPLATE
+.jsBlockIngredients {
+    position: absolute;
+    top: 3%;
+    left: 105%;    
+}
 
+.ingredientsList {
+    position: absolute;
+    top: 3%;
+    left: 105%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(270px);
+    min-height: rem(335px);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color: $dark;
+    line-height: 1.714;
+} 
+
+.ingredientsItem { 
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+}
+// -----------------------------
 // ending burgers
 
 
