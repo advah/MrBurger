@@ -49,32 +49,25 @@ btnLeft.addEventListener('click', function(event) {
 
 // POPup----------------------------
  
-    const jsBlockIngredients = document.createElement('div');
-    jsBlockIngredients.classList.add('jsBlockIngredients');
+    const blockIngredients = document.createElement('div');
+    blockIngredients.classList.add('blockIngredients');
+    blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
 
-    // const burgersList уже объявлена выше, в отлеле Слайдер, перед функцией
-    burgersList.addEventListener('mouseover', function(event) {
-
-        if(event.target.className == 'burgers__composition' 
-         || event.target.className == 'burgers__composition-pic' 
-         || event.target.className == 'burgers__composition-text') {
-            jsBlockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
-            event.target.appendChild(jsBlockIngredients);
-            console.log(event.target.className);
-        };
-
-    });
-
-    burgersList.addEventListener('mouseout', function(event) {
-
-        if(event.target.className == 'burgers__composition') {
-            event.target.removeChild(jsBlockIngredients);
-        };
-        
-    });
-
+    const burgersComposition = document.querySelectorAll('.burgers__composition');
     
+    // c mouseenter делегирование не работает, поэтому перебираем все итемы
+    // и проверяем какой из них мышка
+    for(const i of burgersComposition) {
+        
+        i.addEventListener('mouseenter', function(event) {
+            event.target.appendChild(blockIngredients);
+        });
 
+        i.addEventListener('mouseleave', function(event) {
+            event.target.removeChild(blockIngredients);
+        });      
+    }
+   
 // конец POPup------------------------
 // endBurgers-----------
 

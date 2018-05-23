@@ -162,7 +162,7 @@
     display: flex;
     position: relative;
     will-change: right;
-    transition: right .3s;
+    transition: right .7s;
 }
 
 .burgers__item {
@@ -385,7 +385,7 @@
         display: block;
         width: 0;
         height: 0;
-        border: rem(10px) solid transparent;
+        border: rem(5px) solid transparent;
         border-top-color: $yellow;
         border-bottom-width: 0px; 
     }
