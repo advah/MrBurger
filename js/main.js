@@ -49,18 +49,26 @@ btnLeft.addEventListener('click', function(event) {
 
 // POPup----------------------------
  
-    const blockIngredients = document.createElement('div');
-    blockIngredients.classList.add('blockIngredients');
-    blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
+    // const blockIngredients = document.createElement('div');
+    // blockIngredients.classList.add('blockIngredients');
+    // blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
 
     const burgersComposition = document.querySelectorAll('.burgers__composition');
     
     // c mouseenter делегирование не работает, поэтому перебираем все итемы
     // и проверяем какой из них мышка
     for(const i of burgersComposition) {
+
+        const blockIngredients = document.createElement('div');
         
         i.addEventListener('mouseenter', function(event) {
+
+            blockIngredients.classList.add('blockIngredients');
+            blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
+
             event.target.appendChild(blockIngredients);
+
+            return blockIngredients;
         });
 
         i.addEventListener('mouseleave', function(event) {
