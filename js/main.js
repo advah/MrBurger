@@ -49,32 +49,26 @@ btnLeft.addEventListener('click', function(event) {
 
 // POPup----------------------------
  
-    // const blockIngredients = document.createElement('div');
-    // blockIngredients.classList.add('blockIngredients');
-    // blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
-
-    const burgersComposition = document.querySelectorAll('.burgers__composition');
+    // const burgersComposition = document.querySelectorAll('.burgers__composition');
     
-    // c mouseenter делегирование не работает, поэтому перебираем все итемы
-    // и проверяем какой из них мышка
-    for(const i of burgersComposition) {
+    // // c mouseenter делегирование не работает, поэтому перебираем все итемы
+    // // и проверяем какой из них мышка
+    // for(const i of burgersComposition) {
 
-        const blockIngredients = document.createElement('div');
+    //     const blockIngredients = document.createElement('div');
         
-        i.addEventListener('mouseenter', function(event) {
+    //     i.addEventListener('mouseenter', function(event) {
 
-            blockIngredients.classList.add('blockIngredients');
-            blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
+    //         blockIngredients.classList.add('blockIngredients');
+    //         blockIngredients.innerHTML = document.querySelector('.js-burgerComposition').innerHTML;
 
-            event.target.appendChild(blockIngredients);
+    //         event.target.appendChild(blockIngredients);            
+    //     });
 
-            return blockIngredients;
-        });
-
-        i.addEventListener('mouseleave', function(event) {
-            event.target.removeChild(blockIngredients);
-        });      
-    }
+    //     i.addEventListener('mouseleave', function(event) {
+    //         event.target.removeChild(blockIngredients);
+    //     });      
+    // }
    
 // конец POPup------------------------
 // endBurgers-----------
@@ -128,7 +122,6 @@ const teamRef = "team__member";
 const teamClassActiv = "team__item-activ";
 
 accordeon(teamList, teamRef, teamClassActiv);
-
 // endTeam----------
 
 // MENU--------------------
@@ -173,3 +166,44 @@ const menuTarget = "menu__acco-title";
 const menuClassActiv = "menu__item-activ";
 
 accordeon(menuAcco, menuTarget, menuClassActiv);
+// конец МЕНЮ
+
+// ОТЗЫВЫ
+
+const reviewsList = document.querySelector('.reviews__list');
+const reviewsPopup = document.querySelector('.reviews__popup');
+const reviewsCloseBtn = document.querySelector('.reviews__popup-close-btn');
+
+var reviewsPopupTitle = document.querySelector('.reviews__popup-title');
+var reviewsPopupText = document.querySelector('.reviews__popup-text');
+
+var closePopupScreen = function() {
+    reviewsPopup.classList.add('visuallyhidden');
+};
+
+reviewsList.addEventListener('click', function(event) {
+    console.log(event.target.className);
+    if(event.target.className === 'reviews__item__btn') {
+
+        let reviewsItemHeader = event.target.parentNode.querySelector('.reviews__item__header');
+        reviewsPopupTitle.textContent = reviewsItemHeader.textContent;
+
+        let reviewsItemText = event.target.parentNode.querySelector('.reviews__item__text');
+        reviewsPopupText.textContent = reviewsItemText.textContent;
+
+        reviewsPopup.classList.remove('visuallyhidden');
+    };    
+});
+
+reviewsPopup.addEventListener('click', function(event) {
+    if(event.target.className === 'reviews__popup') {
+        console.log(event.target.className);
+        closePopupScreen();
+    }
+});
+
+reviewsCloseBtn.addEventListener('click', function(event) {
+    if(event.target.className === 'reviews__popup-close-btn') {
+    closePopupScreen();
+    }
+});

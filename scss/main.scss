@@ -195,6 +195,11 @@
     color: rgb(255, 255, 255);
     line-height: 2.008;
     cursor: help;
+
+    &:hover  .ingredientsList {
+        height: rem(335px);
+        opacity: .8; 
+    }
 }
 
 .burgers__calories {
@@ -282,8 +287,6 @@
 // BURGERS TEMPLATE
 .jsBlockIngredients {
     position: absolute;
-    top: 3%;
-    left: 105%;    
 }
 
 .ingredientsList {
@@ -295,14 +298,19 @@
     justify-content: center;
     align-items: center;
     width: rem(270px);
-    min-height: rem(335px);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    opacity: 0.8;
     font-size: 14px;
     font-family: "Ubuntu";
     color: $dark;
     line-height: 1.714;
+
+    height: 0;
+    opacity: 0;
+    transition: .6s;
+    overflow: hidden;
+    // min-height: rem(335px);
+
 } 
 
 .ingredientsItem { 
@@ -363,7 +371,8 @@
 
 .team__item-activ {
     .accordeon__content {
-        height: auto;
+        height: rem(140px);
+        opacity: 1;
     }
 
     .team__member {
@@ -386,9 +395,10 @@
         display: block;
         width: 0;
         height: 0;
-        border: rem(5px) solid transparent;
+        border: rem(7px) solid transparent;
         border-top-color: $yellow;
-        border-bottom-width: 0px; 
+        border-bottom-width: 0px;
+        transition: 1s; 
     }
 }
 
@@ -409,6 +419,8 @@
     display: flex;
     height: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: .6s; 
 }
 
 .accordion__content {
@@ -508,13 +520,27 @@
     height: 100vh;
     width: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    
+}
+
+.menu__text {
+    opacity: 0;
 }
 
 .menu__item-activ {
     
     & .menu__content {
-        width: 540px;
-        padding: 35px 60px;
+        width: rem(540px);
+        padding: rem(35px) rem(60px);
+        opacity: 1;
+    }
+
+    & .menu__text {
+        transition: .3s;
+        transition-delay: .5s;
+        opacity: 1;
     }
 
     & .menu__acco-title {
@@ -529,10 +555,56 @@
 
 
 #section__reviews {
-
+    position: relative;
     background-image: url('../img/reviews/bkground.png');
     @extend %section-bg;
     display: flex;
+}
+
+.reviews__popup {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #2f3234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: .8;
+
+    &-block {
+        position: absolute;
+        width: rem(460px);
+        min-height: rem(175px);
+        border-radius: 15px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 35px 35px;
+    }
+
+    &-title {
+        margin-bottom: 10px;
+    }
+
+    &-close-btn {
+        position: absolute;
+        top: 1%;
+        left: 93%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1%;
+        font-size: 19px;
+        color: red;
+        background-color: #f3ebe2;
+        border-radius: 10px;
+        cursor: pointer;
+    }
 }
 
 .reviews__wrap {
@@ -559,67 +631,76 @@
     background-size: cover;
     overflow: hidden;
     filter: grayscale(100%);
-}
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: rgba(47, 50, 52, 0.0);
+        padding: rem(50px) rem(20px);
+        align-items: flex-start;
 
 
-.reviews__item-wrap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: rgba(47, 50, 52, 0.0);
-    padding: rem(50px) rem(20px);
-}
 
-.reviews__item-wrap:hover {
-    background: rgba(47, 50, 52, 0.6);
-    transition: .5s;
-}
+        &:hover {
+            background: rgba(47, 50, 52, 0.6);
+            transition: .5s;
+        }
 
-.reviews__item-wrap:hover 
-.reviews__item__header {
-    color: rgb(255, 255, 255);
-    transition: .5s;
-}
+        &:hover 
+        .reviews__item__header {
+            color: rgb(255, 255, 255);
+            transition: .5s;
+        }
 
-.reviews__item-wrap:hover 
-.reviews__item__text {
-    color: rgb(255, 255, 255);
-    transition: 1s;
-}
+        &:hover 
+        .reviews__item__text {
+            color: rgb(255, 255, 255);
+            transition: 1s;
+        }
 
-.reviews__item-wrap:hover 
-.reviews__item__btn {
-    color: rgb(255, 255, 255);
-    background: #2f3234;
-    transition: 1.5s;
-}
+        &:hover 
+        .reviews__item__btn {
+            color: rgb(255, 255, 255);
+            background: #2f3234;
+            transition: .5s;
+        }
+    }
 
-.reviews__item__header {
-    display: block;
-    margin-bottom: rem(25px);
-    font-size: rem(14px);
-    font-family: "gagalin";
-    line-height: 2.008;
-    color: rgba(47, 50, 52, 0.0);
-}
 
-.reviews__item__text {
-    display: block;
-    margin-bottom: rem(15px);
-    font-size: rem(14px);
-    color: rgba(47, 50, 52, 0.0);
-}
+    &__header {
+        display: block;
+        margin-bottom: rem(25px);
+        font-size: rem(14px);
+        font-family: "gagalin";
+        line-height: 2.008;
+        color: rgba(47, 50, 52, 0.0);
+    }
 
-.reviews__item__btn {
-    display: inline-block;
-    padding: rem(15px) rem(10px);
-    font-size: rem(13px);
-    text-transform: uppercase;
-    border-radius: 3px;
-    color: rgba(47, 50, 52, 0.0);
-    background: rgba(47, 50, 52, 0.0);
-}
+    &__text {
+        display: block;
+        margin-bottom: rem(15px);
+        font-size: rem(14px);
+        color: rgba(47, 50, 52, 0.0);
+    }
+
+    &__btn{
+        padding: rem(10px) rem(10px);
+        font-size: rem(13px);
+        text-transform: uppercase;
+        border-color: transparent;
+        border-radius: rem(7px);
+        color: rgba(47, 50, 52, 0.0);
+        background: rgba(47, 50, 52, 0.0);
+        cursor: pointer;
+
+        &:hover {
+            border-color: #575c5f;
+        }
+    }
+}    
+
 // ending REVIEWS
 
 
