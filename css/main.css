@@ -1383,7 +1383,8 @@ p {
     border-color: #575c5f; }
 
 #section__map {
-  background-image: url("../img/map-pg/bkgroung.jpg"); }
+  background-image: url("../img/map-pg/bkgroung.jpg");
+  position: relative; }
 
 .side-menu {
   position: fixed;
@@ -1403,7 +1404,80 @@ p {
   justify-content: space-around; }
 
 footer {
-  position: relative;
-  width: 100%; }
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 3.75rem;
+  background: url("../img/footer/bkgroung.jpg") center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.footer__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.contacts {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.625rem 0rem 0.625rem 4.375rem; }
+  .contacts__adress {
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #fff; }
+  .contacts__phone-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .contacts__phone {
+    display: inline-block;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: 700;
+    color: #e45028;
+    text-decoration: none; }
+    .contacts__phone::before {
+      content: "";
+      display: inline-block;
+      width: 0.9375rem;
+      height: 0.9375rem;
+      background-image: url(../img/footer/phone.svg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-right: 0.625rem; }
+
+.socials {
+  width: 50%; }
+  .socials__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-right: 4.375rem; }
+  .socials__item {
+    padding: 1.25rem 1.25rem; }
+  .socials__icons {
+    width: 1.25rem;
+    height: 1.25rem;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
+    transition: .7s;
+    opacity: .5; }
+    .socials__icons:hover {
+      opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

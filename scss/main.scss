@@ -836,6 +836,7 @@
 #section__map {
     background-image: url('../img/map-pg/bkgroung.jpg');
     @extend %section-bg;
+    position: relative;
 }
 // ending map
 
@@ -866,6 +867,76 @@
 
 // FOOTER
 footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    min-height: rem(60px);
+    background: url('../img/footer/bkgroung.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.footer__container {
+    width: 100%;
+    display: flex;
+}
+
+.contacts {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: rem(10px) rem(0px) rem(10px) rem(70px);
+
+    &__adress {
+        @include ubuntu(light);
+        color: #fff;
+    }
+
+    &__phone-wrap {
+        display: flex;
+    }
+
+        &__phone {
+            display: inline-block;
+            @include ubuntu(bold);
+            color: #e45028;
+            text-decoration: none;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: rem(15px);
+                height: rem(15px);
+                background-image: url(../img/footer/phone.svg);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin-right: rem(10px);
+            }
+        }
+}
+
+.socials {
+    width: 50%;
+
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: rem(70px);
+    }
+
+    &__item {
+        padding: rem(20px) rem(20px);
+    }
+
+    &__icons {
+        width: rem(20px);
+        height: rem(20px);
+        transition: .7s;
+        opacity: .5;
+        &:hover{
+            opacity: 1;
+        }
+    }
 }
