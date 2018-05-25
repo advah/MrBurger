@@ -301,7 +301,7 @@
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     font-size: 14px;
-    font-family: "Ubuntu";
+    font-family: "ubuntu";
     color: $dark;
     line-height: 1.714;
 
@@ -705,97 +705,7 @@
 
 
 
-
-
-
-.section__form {
-    display: flex;
-    align-items: center;
-    background-image: url('../img/form/bkground.jpg');
-    @extend %section-bg;
-}
-  
-.form{
-    display: flex;
-    justify-content: space-between;
-}  
-
-.form__column {
-    width: 49%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-  
-  
-.form__row {
-    display: flex;
-    margin-bottom: rem(18px);
-}
-  
-.form__label {
-    flex: 1;
-    margin-right: rem(20px);
-    
-    &:last-child {
-    margin-right: 0;  
-    }
-}
-  
-.form__label-title {
-    display: block;
-    color: #fff;
-    margin-bottom: rem(7px);
-    font-weight: 300;
-    font-size: rem(14px);
-  
-    &--nocall {
-      margin-bottom: 0;
-      margin-left: rem(10px);
-    }
-}
-  
-  .form__input {
-    width: 100%;
-    border: 1px solid transparent;
-    font-size: rem(14px);
-    border-radius: rem(5px);
-    padding: rem(7px) rem(15px);
-    outline: none;
-  
-    &--textarea {
-      height: rem(110px);
-      resize: none;
-    }
-  
-    &:focus {
-      border: 1px solid $yellow;
-    }
-}
-  
-.form__radio,
-.form__checkbox {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-}
-  
-.form__btn-reset {
-    background-color: transparent;
-    text-transform: unset;
-    transition: .3s;
-  
-    &:hover {
-      background-color: black;
-      
-    }
-}
-
-
-
-
-
-// FORM
+// ФОРМА
 
 #section__form {
     background-image: url('../img/form/bkground.jpg');
@@ -825,10 +735,13 @@
 }
 
 .form {
+    display: flex;
+    justify-content: space-between;
     font-size: rem(14px);
-    font-family: "Ubuntu";
+    @include ubuntu (bold);
     color: rgb(255, 255, 255);
     line-height: 1.714;
+    
 }
   
 .form__content {
@@ -837,6 +750,7 @@
 }
   
 .form__column {
+    width: 49%; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -847,42 +761,72 @@
     align-items: center;
 }
   
-.form__cell {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.form__row {
+    margin-bottom: rem(18px);
 }
-  
-.form__label, .form__input {
+
+.form__label {
+    flex: 1;
     margin-right: rem(20px);
-    margin-bottom: rem(10px);
-    border-radius: 5px;
+    
+    &:last-child {
+    margin-right: 0;  
+    }
+}
+
+.form__label-title {
+    display: block;
+    color: #fff;
+    margin-bottom: rem(7px);
+    font-weight: 300;
+    font-size: rem(14px);
+  
+    &--nocall {
+      margin-bottom: 0;
+      margin-left: rem(10px);
+    }
 }
 
 .form__input {
-    height: rem(35px);
-}
+    width: 100%;
+    border: 1px solid transparent;
+    font-size: rem(14px);
+    border-radius: rem(5px);
+    padding: rem(7px) rem(15px);
+    outline: none;
   
-.input-name {
-    width: rem(220px);
-}
+    &--textarea {
+      height: rem(110px);
+      resize: none;
+    }
   
-.input-st {
-    width: rem(460px);
+    &:focus {
+      border: 1px solid $yellow;
+    }
 }
 
-.input-adress {
-    width: rem(100px);
+.form__radio,
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
 }
 
-.form__tx-area {
-    width: rem(460px);
-    height: rem(110px);
-    border-radius: 5px;
+.form__btn {
+    border-color: transparent;
 }
 
-.form__radio-text {
-    padding: rem(15px) rem(10px);
+.form__btn-reset {
+    padding: rem(8px) (17px);
+    margin-left: 10px;
+    border-radius: rem(7px);
+    background-color: transparent;
+    color: #fff;
+    transition: .5s;
+  
+    &:hover {
+        border-color: #575c5f;    
+    }
 }
 // ending form
 

@@ -313,7 +313,31 @@ template {
   font-weight: 500;
   font-style: normal; }
 
-#section__main-pg, #section__we-pg, #section__team, #menu, #section__reviews, .section__form, #section__form, #section__map {
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu.woff2") format("woff2"), url("../fonts/ubuntu.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu_bold.woff2") format("woff2"), url("../fonts/ubuntu_bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu_light.woff2") format("woff2"), url("../fonts/ubuntu_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu_medium.woff2") format("woff2"), url("../fonts/ubuntu_medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+#section__main-pg, #section__we-pg, #section__team, #menu, #section__reviews, #section__form, #section__map {
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: cover; }
@@ -332,9 +356,6 @@ body {
   font-size: 0.875rem;
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300;
-  font-weight: 400;
-  font-weight: 500;
-  font-weight: 700;
   line-height: 1.42;
   color: #2f3234;
   -webkit-font-smoothing: antialiased;
@@ -819,7 +840,7 @@ p {
   border-radius: 5px;
   background-color: white;
   font-size: 14px;
-  font-family: "Ubuntu";
+  font-family: "ubuntu";
   color: #2f3234;
   line-height: 1.714;
   height: 0;
@@ -895,10 +916,7 @@ p {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   font-family: 'Ubuntu', Helvetica, sans-serif;
-  font-weight: 300;
-  font-weight: 400;
-  font-weight: 500;
-  font-weight: 700; }
+  font-weight: 300; }
 
 .team__item-activ .accordeon__content {
   height: 8.75rem;
@@ -966,9 +984,6 @@ p {
 
 .team__position {
   font-family: 'Ubuntu', Helvetica, sans-serif;
-  font-weight: 300;
-  font-weight: 400;
-  font-weight: 500;
   font-weight: 700;
   font-size: 0.875rem; }
 
@@ -1228,14 +1243,43 @@ p {
     .reviews__item__btn:hover {
       border-color: #575c5f; }
 
-.section__form {
+#section__form {
+  background-image: url("../img/form/bkground.jpg"); }
+
+.container__order {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.form__wrap {
+  width: 100%;
+  height: 23.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  background-image: url("../img/form/bkground.jpg"); }
+  align-items: center; }
+
+.order__title {
+  font-family: serif;
+  font-size: 4.5rem;
+  color: #f8b43a;
+  text-transform: uppercase; }
 
 .form {
   display: -webkit-box;
@@ -1243,7 +1287,20 @@ p {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+  line-height: 1.714; }
+
+.form__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .form__column {
   width: 49%;
@@ -1258,10 +1315,15 @@ p {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
-.form__row {
+.form__row, .form__radio-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.form__row {
   margin-bottom: 1.125rem; }
 
 .form__label {
@@ -1305,121 +1367,20 @@ p {
   align-items: center;
   margin-right: 1rem; }
 
+.form__btn {
+  border-color: transparent; }
+
 .form__btn-reset {
+  padding: 0.5rem 17px;
+  margin-left: 10px;
+  border-radius: 0.4375rem;
   background-color: transparent;
-  text-transform: unset;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
+  color: #fff;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
   .form__btn-reset:hover {
-    background-color: black; }
-
-#section__form {
-  background-image: url("../img/form/bkground.jpg"); }
-
-.container__order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.form__wrap {
-  width: 100%;
-  height: 23.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.order__title {
-  font-family: serif;
-  font-size: 4.5rem;
-  color: #f8b43a;
-  text-transform: uppercase; }
-
-.form {
-  font-size: 0.875rem;
-  font-family: "Ubuntu";
-  color: white;
-  line-height: 1.714; }
-
-.form__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.form__column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
-
-.form__row, .form__radio-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.form__cell {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%; }
-
-.form__label, .form__input {
-  margin-right: 1.25rem;
-  margin-bottom: 0.625rem;
-  border-radius: 5px; }
-
-.form__input {
-  height: 2.1875rem; }
-
-.input-name {
-  width: 13.75rem; }
-
-.input-st {
-  width: 28.75rem; }
-
-.input-adress {
-  width: 6.25rem; }
-
-.form__tx-area {
-  width: 28.75rem;
-  height: 6.875rem;
-  border-radius: 5px; }
-
-.form__radio-text {
-  padding: 0.9375rem 0.625rem; }
+    border-color: #575c5f; }
 
 #section__map {
   background-image: url("../img/map-pg/bkgroung.jpg"); }

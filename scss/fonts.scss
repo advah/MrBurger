@@ -14,20 +14,54 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu.woff2') format('woff2'),
+         url('../fonts/ubuntu.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu_bold.woff2') format('woff2'),
+         url('../fonts/ubuntu_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu_light.woff2') format('woff2'),
+         url('../fonts/ubuntu_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu_medium.woff2') format('woff2'),
+         url('../fonts/ubuntu_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
 @mixin ubuntu ($style:light) {
     font-family: 'Ubuntu', Helvetica, sans-serif;
 
-    @if $style = light {
+    @if $style == light {
         font-weight: 300;
     }
 
-    @if $style = normal {
+    @if $style == normal {
         font-weight: 400;
     }
-    @if $style = medium {
+    @if $style == medium {
         font-weight: 500;
     }
-    @if $style = bold {
+    @if $style == bold {
         font-weight: 700;
     }
 }
