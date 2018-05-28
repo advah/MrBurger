@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 12px;
+    padding: rem(12px);
 
 }
 
@@ -13,14 +13,19 @@
 }
 
 .header__nav {
+    display: flex;
     width: 75%;
     text-align: right;
-    padding-right: 13px;
+    padding-right: rem(13px);
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__ref, .order-ref {
     display: block;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -36,7 +41,7 @@
         display: inline-block;
         vertical-align: middle;
         content: ' ';
-        @include circle(5px, #fff);
+        @include circle(rem(5px), #fff);
         margin: 0 rem(12px);
     }
 

@@ -346,9 +346,18 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 16px; }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 13px; } }
+
 body, html {
   height: 100%;
-  font-size: 16px; }
+  width: 100%; }
 
 body {
   margin: 0;
@@ -429,19 +438,25 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 12px; }
+  padding: 0.75rem; }
 
 .header__logo {
   margin-left: auto; }
 
 .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 75%;
   text-align: right;
-  padding-right: 13px; }
+  padding-right: 0.8125rem; }
+  @media screen and (max-width: 768px) {
+    .header__nav {
+      display: none; } }
 
 .header__ref, .order-ref {
   display: block;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
@@ -454,9 +469,9 @@ p {
   display: inline-block;
   vertical-align: middle;
   content: ' ';
-  width: 5px;
-  height: 5px;
-  border-radius: 2.5px;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 0.15625rem;
   background-color: #fff;
   margin: 0 0.75rem; }
 
@@ -503,6 +518,7 @@ p {
 
 .we-do {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +564,7 @@ p {
 /*WE-pg*/
 #section__we-pg {
   background-image: url(../img/we-pg/bkground.jpg);
-  padding: 110px 49px; }
+  padding: 6.875rem 3.0625rem; }
 
 .we-pg {
   height: 100%;
@@ -688,7 +704,7 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "gagalin"; }
 
 .burgers__composition {
@@ -709,7 +725,7 @@ p {
   width: 5.625rem;
   height: 5.625rem;
   background-color: #f08c33;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   color: white;
   line-height: 2.008;
   cursor: help; }
@@ -762,7 +778,7 @@ p {
   padding-left: 3%; }
 
 .burgers__H1-wrap {
-  margin-bottom: 40px; }
+  margin-bottom: 2.5rem; }
 
 .heading__burgers {
   color: #fff;
@@ -837,9 +853,9 @@ p {
   -ms-flex-align: center;
   align-items: center;
   width: 16.875rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "ubuntu";
   color: #2f3234;
   line-height: 1.714;
@@ -992,7 +1008,7 @@ p {
   position: relative; }
 
 .menu__H1-wrap {
-  padding: 80px 100px; }
+  padding: 5rem 6.25rem; }
   .menu__H1-wrap .heading__menu {
     color: #fff; }
 
@@ -1020,7 +1036,7 @@ p {
 
 .menu__title-container {
   position: relative;
-  width: 80px;
+  width: 5rem;
   height: 100vh; }
 
 .menu__title-container-meat {
@@ -1047,7 +1063,7 @@ p {
 
 .menu__acco-title {
   font-family: 'gagalin';
-  font-size: 40px;
+  font-size: 2.5rem;
   white-space: nowrap;
   cursor: pointer; }
 
@@ -1110,7 +1126,7 @@ p {
     position: absolute;
     width: 28.75rem;
     min-height: 10.9375rem;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1125,15 +1141,15 @@ p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 15px 35px 35px; }
+    padding: 0.9375rem 2.1875rem 2.1875rem; }
   .reviews__popup-title {
-    margin-bottom: 10px; }
+    margin-bottom: 0.625rem; }
   .reviews__popup-close-btn {
     position: absolute;
     top: 1%;
     left: 93%;
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1144,10 +1160,10 @@ p {
     -ms-flex-align: center;
     align-items: center;
     padding-bottom: 1%;
-    font-size: 19px;
+    font-size: 1.1875rem;
     color: red;
     background-color: #f3ebe2;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     cursor: pointer; }
 
 .reviews__wrap {
@@ -1372,7 +1388,7 @@ p {
 
 .form__btn-reset {
   padding: 0.5rem 17px;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   border-radius: 0.4375rem;
   background-color: transparent;
   color: #fff;
@@ -1390,6 +1406,9 @@ p {
   position: fixed;
   left: 98%;
   top: 5%; }
+  @media screen and (max-width: 768px) {
+    .side-menu {
+      display: none; } }
 
 .side-menu__list {
   height: 9.375rem;
