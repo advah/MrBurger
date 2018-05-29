@@ -13,7 +13,7 @@ $phones: 480px;
   }
 }
 
-$tablets: 768px;
+$tablets: 830px;
 
 @mixin tablets {
   @media screen and (max-width:$tablets) {

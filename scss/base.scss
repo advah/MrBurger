@@ -97,6 +97,15 @@ p {
   font-family: "gagalin";
   color: $yellow;
   font-size: rem(72px);
+
+  @include tablets {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 2rem;
+  }
 }
 
 
